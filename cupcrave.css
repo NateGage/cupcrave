@@ -15,6 +15,7 @@
 #kitchenTipImage {
     width: 20%;
     float: right;
+    position: relative;
 }
 #kitchenTip {
     background-color: #fff3e5;
@@ -23,12 +24,13 @@
     padding-top: 2%;
     padding-bottom: 2%;
     font-family: Noto Serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 #holidayImage {
     width: 100%;
     float: none;
     margin-top: -5%;
+    position: relative;
 }
 #funSection {
     margin-bottom: 5%;
@@ -36,7 +38,7 @@
     margin-top: 2%;
     background-color: #ffffe5;
     font-family: Noto Serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 #holidayCupcake {
     width: 100%;
@@ -69,5 +71,15 @@
 }
 #orderSection {
     font-family: Noto Serif;
-    font-size: 16px;
+    font-size: 18px;
+}
+#contactText {
+    font-family: Libre Baskerville;
+    font-size: 25px;
+}
+#fancyLine {
+    width: 80%;
+    height: auto;
+    margin-top: -35px;
+    margin-left: 10%;
 }

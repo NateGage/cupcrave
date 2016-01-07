@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='cupcrave.css'>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
     
     
 </head>    
@@ -49,48 +50,52 @@
         
         <br><img id='cupCraveBanner' src='./images/cupcraveBanner.jpg'>
         
+        
         <div id='mainContainer' class='row'>
-                <div id='leftPage' class='col-md-8'>
-                    <h3 id='indexTitle'>Cupcakes made from the witch's kitchen and poisoned for you.</h3>
-                    <br>
-                    <p class='cupCraveDescrip'>Here is all the text describing cupcrave and what the imaginary cupcakes are made out of and what they look like and how nobody is actually making and in fact im probably illegally using images but i have to make a website for it anyway and im typing this just to fill some columns.</p>
+            <div id='leftPage' class='col-md-8'>
+                <h3 id='indexTitle'>Cupcakes from a home kitchen, just as it should be.</h3>
+                
+                <br>
+                <p class='cupCraveDescrip'>Something friendly and special like cupcakes should only be created in a friendly and special way. And what better place than the home kitchen! That's why all of CupCrave's unique cupcake creations are individually crafted with all-natural ingredients by Abbie--from her home kitchen.</p>
 
-                    <p class='cupCraveDescrip'>this needs to take up way more space with maybe some images and stuff. of cupcakes.aaaaaaaaaaaaaaaaaaand</p>
-         
-                    <!--slideshow for the left page-->
-                    <div id="slideshow">
-                       <div>
-                         <img src='./images/slideshow1.png'>
-                       </div>
-                       <div>
-                         <img src='./images/slideshow2.png'>
-                       </div>
-                       <div>
-                         <img src='./images/slideshow3.png'>
-                       </div>
-                    </div>
-                    <div id='orderSection'><br>
-                        <h3 id='orderTitle'>Have the CupCravings? Ready to try a cupcake?</h3>
-                        <br>
-                        <p>If you haven't already, take a peek at some of my cupcakes to see the endless possibility of creations!  </p>
-                        <button class='btn btn-lg btn-info col-md-offset-1'>Take a Tour! <i class='glyphicon glyphicon-cutlery'></i></button>
-                        <br><br><br>
-                        <p style='font-size: 20px;'>Contact Abbie to order your cupcakes, more information, and special offers. Bon Appetite!</p>
-                    </div>
+                <p class='cupCraveDescrip'>Please enjoy your visit with a small taste of the passion and artistry that goes in to each CupCrave cupcake.</p>
+
+                <!--slideshow for the left page-->
+                <div id="slideshow">
+                   <div>
+                     <img src='./images/slideshow1.png'>
+                   </div>
+                   <div>
+                     <img src='./images/slideshow2.png'>
+                   </div>
+                   <div>
+                     <img src='./images/slideshow3.png'>
+                   </div>
+                </div>
+                <div id='orderSection'><br>
+                    <h3 id='orderTitle'>Have the CupCravings? Ready to try a cupcake?</h3>
+                    <br>
+                    <p>If you haven't already, click the button to take a peek at some of my cupcakes to see the endless possibility of creations!</p>
+                    <button class='btn btn-lg btn-info'>Take a Tour! <i class='glyphicon glyphicon-cutlery'></i></button>
+                    <br><br>
+                    <p style='font-size: 20px; font-family: Libre Baskerville'>Contact Abbie to order your cupcakes, get more information, and special offers.</p>
+                    <p class='text-center' style='font-size: 30px; font-family: Libre Baskerville'>Bon Appetite!</p>
+                    <br>
+                    <img id='fancyLine' src='./images/fancyLine.jpg'>
+                </div>
                     
                 </div>
                 <div id='rightSidebar' class='col-md-4'>
                     <div id='kitchenTip'>
                         <img id='kitchenTipImage' src='images/kitchenTip.jpg'>
-                        <p>Here's the stuff for the right sidebar, like the tip from the kitchen.</p>
-                        <p>andmore stuff. this kitchen tip is going to be the best. and the ggshell looks cool</p>
-                        <p>and more stuff</p>
-                        <p>all the way down to the bottom of the right sidebar so that i know that this is only taking up 4 columns on the right side of the page without having to specify an offset because the mainContainer id has a class of 'row'</p> 
+                        <p style='font-size: 30px; font-family: Cedarville Cursive' class='text-center'>Tip From the Kitchen!</p>
+                        <p>When making your cupcake batter, don't mix the batter for too long!</p>
+                        <p>Mixing batter for too long will result in a denser cupcake, and you will lose a lot of the fluffy-ness that everyone loves! For best results, do a bit of research on the ingredients you're using to find out the perfect amount of time for mixing.</p> 
                     </div>
                     <br>
                     <div id='funSection'>
                         <img id='holidayImage' src='./images/new-year-banner.png'>
-                        <p><br>Here is a fun and creative cupcake idea for the holiday! This image is really pushing the text over so it looks horrible but I'm gonna keep writing stuff to get to the bottom and see what it looks like. Still goingggg. still goingggg... trying to see if it will wrap around. and it does.</p>
+                        <p><br>Here is a fun and creative cupcake idea for the New Year! Themed cupcakes can be the life of the party. Be sure to check back for new cupcake ideas for the holidays, birthdays, and other special occaisions!</p>
                         <img id='holidayCupcake' src='./images/holidayCupcake.jpg'>
                     </div>
                 </div>
@@ -101,7 +106,7 @@
 <script>
        
     $("#slideshow > div:gt(0)").hide();
-       setInterval(function() { 
+        setInterval(function() { 
             $('#slideshow > div:first')
                 .fadeOut(1000)
                 .next()
@@ -109,6 +114,26 @@
                 .end()
                 .appendTo('#slideshow');
             },  3000);
+    $(document).ready(function() {
+        $('#holidayImage').css({opacity: 0.8});
+        $('#holidayImage').hover(
+            function() {
+                $(this).css({opacity: 1});
+            },
+            function() {
+                $(this).css({opacity: 0.8});
+            }
+        );
+        $('#kitchenTip').hover(
+            function() {
+                $('#kitchenTipImage').animate({top: '-10px'}, 500);
+            },
+            function() {
+                $('#kitchenTipImage').animate({top: '0px'}, 500);
+            }
+        );
+    });
+    
 </script>
 
 
