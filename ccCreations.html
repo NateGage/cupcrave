@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+<title>CupCrave - Cupcakes by Abbie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='cupcrave.css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+    
+    
+</head>    
+
+<body>
+    <div class='container'>
+        
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="./index.html">CupCrave<span class="sr-only">(current)</span></a></li>
+                  <li><a href='./ccCreations.html'>Creations</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Go</button>
+              </form>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+        
+        <br><img id='cupCraveBanner' src='./images/cupcraveBanner.jpg'>
+        
+        
+        <div id='mainContainer' class='row'>
+            <div id='leftPage' class='col-md-8'>
+                <h3 id='indexTitle'>CupCrave Creations</h3>
+                <br><br>
+                
+                <h3>The CupCrave tour is temporarily under maitenance. We're baking up some more creations in the kitchen! </h3>
+                <img src='images/cone.png'>
+                    
+            </div>
+                <div id='rightSidebar' class='col-md-4'>
+                    <div id='kitchenTip'>
+                        <img id='kitchenTipImage' src='images/kitchenTip.jpg'>
+                        <p style='font-size: 30px; font-family: Cedarville Cursive' class='text-center'>Tip From the Kitchen!</p>
+                        <p>When making your cupcake batter, don't mix the batter for too long!</p>
+                        <p>Mixing batter for too long will result in a denser cupcake, and you will lose a lot of the fluffy-ness that everyone loves! For best results, do a bit of research on the ingredients you're using to find out the perfect amount of time for mixing.</p> 
+                    </div>
+                    <br>
+                    <div id='funSection'>
+                        <img id='holidayImage' src='./images/new-year-banner.png'>
+                        <p><br>Here is a fun and creative cupcake idea for the New Year! Themed cupcakes can be the life of the party. Be sure to check back for new cupcake ideas for the holidays, birthdays, and other special occaisions!</p>
+                        <img id='holidayCupcake' src='./images/holidayCupcake.jpg'>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    
+<script>
+       
+    $("#slideshow > div:gt(0)").hide();
+        setInterval(function() { 
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+            },  3000);
+    $(document).ready(function() {
+        $('#holidayImage').css({opacity: 0.8});
+        $('#holidayImage').hover(
+            function() {
+                $(this).css({opacity: 1});
+            },
+            function() {
+                $(this).css({opacity: 0.8});
+            }
+        );
+        $('#kitchenTip').hover(
+            function() {
+                $('#kitchenTipImage').animate({top: '-10px'}, 500);
+            },
+            function() {
+                $('#kitchenTipImage').animate({top: '0px'}, 500);
+            }
+        );
+    });
+    
+</script>
+
+
+</body>
+
+</html>

@@ -51,11 +51,15 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.4); 
     margin-top: 2%;
 }
-
 #slideshow > div > img { 
     position: absolute; 
     width: 100%;
     height: 100%;
+}
+@media screen and (max-width: 600px) {
+    #slideshow {
+        display: none;
+    }
 }
 #indexTitle {
     font-family: Libre Baskerville;
